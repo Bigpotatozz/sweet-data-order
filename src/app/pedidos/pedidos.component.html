@@ -1,3 +1,34 @@
 <div>
     <app-header-section nombre_seccion="Pedidos" nombre_usuario="Oscar Mancilla" puesto_usuario="Vendedor"></app-header-section>
 </div>
+
+<div class="tabla">
+
+    <p-table [value]="productos" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Pares</th>
+                <th>Subtotal</th>
+                <th>Fecha de registro</th>
+                <th>Estatus</th>
+            </tr>
+        </ng-template>
+
+        @for (producto of productos; track $index) {
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td>{{ producto.ids}}</td>
+                    <td>{{ producto.nombre_cliente }}</td>
+                    <td>{{ producto.pares }}</td>
+                    <td>{{ producto.subtotal }}</td>
+                    <td>{{ producto.fecha_registro }}</td>
+                    <td>{{ producto.estatus }}</td>
+                </tr>
+            </ng-template>
+        }
+      
+    </p-table>
+
+</div>

@@ -1,34 +1,5 @@
 
 
-
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 100%;
-    margin-left: 15px;
-    padding: 1%;
-    .info_usuario{
-        display: flex;
-        align-items: center;
-
-        .nombre-usuario{
-            margin-right: 15px;
-
-            .nombre{
-                font-size: 18px;
-            }
-            .puesto{
-                margin-top: -15px;
-                font-size: 11px;
-            }
-        }
-
-        img{
-            width: 61px;
-            height: 61px;
-            border: solid 1px transparent;
-            border-radius: 100%;
-        }
-    }
+.tabla{
+    padding: 2%;
 }
