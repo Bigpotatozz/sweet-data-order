@@ -1,0 +1,22 @@
+
+.container{
+    display: flex;
+
+    .navbar{
+        width: 15%;
+    }
+
+
+    .content{
+        padding: 1%;
+        ::ng-deep{
+        
+            .boton{
+                width: 100px;
+            }
+    
+        }
+    }
+  
+}
+
