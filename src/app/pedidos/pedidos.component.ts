@@ -3,11 +3,12 @@ import { HeaderSectionComponent } from "../header-section/header-section.compone
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { PaginatorModule } from 'primeng/paginator';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-pedidos',
   standalone: true,
-  imports: [HeaderSectionComponent, TableModule, ButtonModule, PaginatorModule],
+  imports: [HeaderSectionComponent, TableModule, ButtonModule, PaginatorModule, RouterLink, RouterLinkActive],
   templateUrl: './pedidos.component.html',
   styleUrl: './pedidos.component.scss'
 })

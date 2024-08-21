@@ -1,10 +1,7 @@
-<div>
-    <app-header-section nombre_seccion="Pedidos" nombre_usuario="Oscar Mancilla" puesto_usuario="Vendedor"></app-header-section>
-</div>
 
 
 <div class="botones">
-    <p-button label="Nuevo pedido" />
+    <p-button label="Nuevo pedido" [routerLink]="['/crear-pedido']"/>
 
     <p-button label="Exportar a excel" severity="success" />
 
@@ -12,7 +9,10 @@
 
 <div class="tabla">
 
-    <p-table [value]="productos" [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table [value]="productos"
+     [tableStyle]="{ 'min-width': '50rem' }"
+     [paginator]="true"
+     [rows]="10">
         <ng-template pTemplate="header">
             <tr>
                 <th>ID</th>
@@ -37,7 +37,7 @@
                     <td>{{ producto.estatus }}</td>
                     <td>{{producto.nombre_pedido}}</td>
                     <td class="button_actions">
-                        <a href="#"><i class="pi pi-plus-circle"></i></a>
+                        <a ><i class="pi pi-plus-circle"></i></a>
                         <a href="#"><i class="pi pi-pencil"></i></a>
                         <a href="#"><i class="pi pi-trash"></i></a>
                     </td>
@@ -45,12 +45,5 @@
             </ng-template>
     
     </p-table>
-
-    <p-paginator 
-    (onPageChange)="onPageChange($event)" 
-    [first]="first"
-    [rows]="rows" 
-    [totalRecords]="120" 
-    [rowsPerPageOptions]="[10, 20, 30]" />
 
 </div>

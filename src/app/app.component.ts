@@ -5,11 +5,12 @@ import {ButtonModule} from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FormsModule } from '@angular/forms';
+import { HeaderSectionComponent } from "./header-section/header-section.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, ButtonModule, CalendarModule, FormsModule],
+  imports: [RouterOutlet, NavbarComponent, ButtonModule, CalendarModule, FormsModule, HeaderSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
