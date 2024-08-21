@@ -1,5 +1,39 @@
 
 
+.botones{
+    padding-left: 2%;
+
+    ::ng-deep{
+        p-button{
+            margin-right: 1%;
+        }
+
+    }
+}
 .tabla{
     padding: 2%;
+
+    ::ng-deep{
+        p-table{
+            margin-top: 2%;
+            tr{
+                .button_actions{
+                    a{
+                        margin-right: 1rem;
+                    }
+                    .pi-plus-circle{
+                        color: #22c55e;
+                    }
+                    .pi-pencil{
+                        color: #3B82F6;
+                    }
+
+                    .pi-trash{
+                        color: red;
+                    }
+                }
+            }
+
+        }
+    }
 }

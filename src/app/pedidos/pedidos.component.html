@@ -2,6 +2,14 @@
     <app-header-section nombre_seccion="Pedidos" nombre_usuario="Oscar Mancilla" puesto_usuario="Vendedor"></app-header-section>
 </div>
 
+
+<div class="botones">
+    <p-button label="Nuevo pedido" />
+
+    <p-button label="Exportar a excel" severity="success" />
+
+</div>
+
 <div class="tabla">
 
     <p-table [value]="productos" [tableStyle]="{ 'min-width': '50rem' }">
@@ -13,11 +21,13 @@
                 <th>Subtotal</th>
                 <th>Fecha de registro</th>
                 <th>Estatus</th>
+                <th>Nombre pedido</th>
+                <th></th>
             </tr>
         </ng-template>
 
-        @for (producto of productos; track $index) {
-            <ng-template pTemplate="body" let-product>
+    
+            <ng-template pTemplate="body" let-producto class="filas">
                 <tr>
                     <td>{{ producto.ids}}</td>
                     <td>{{ producto.nombre_cliente }}</td>
@@ -25,10 +35,22 @@
                     <td>{{ producto.subtotal }}</td>
                     <td>{{ producto.fecha_registro }}</td>
                     <td>{{ producto.estatus }}</td>
+                    <td>{{producto.nombre_pedido}}</td>
+                    <td class="button_actions">
+                        <a href="#"><i class="pi pi-plus-circle"></i></a>
+                        <a href="#"><i class="pi pi-pencil"></i></a>
+                        <a href="#"><i class="pi pi-trash"></i></a>
+                    </td>
                 </tr>
             </ng-template>
-        }
-      
+    
     </p-table>
+
+    <p-paginator 
+    (onPageChange)="onPageChange($event)" 
+    [first]="first"
+    [rows]="rows" 
+    [totalRecords]="120" 
+    [rowsPerPageOptions]="[10, 20, 30]" />
 
 </div>
