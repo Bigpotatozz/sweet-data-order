@@ -1,5 +1,5 @@
 <p>crear-pedido works!</p>
 
-<app-input texto="No se que poner:" identificador="nosequeponer" (inputId)="handleInputId($event)" #valorInput></app-input>
+<app-input texto="No se que poner:" identificador="nosequeponer" (content)="handleInputId($event)" #valorInput></app-input>
 
-<button id="boton" #boton (click)="imprimirValor(valorInput.)"></button>
+<button id="boton" #boton (click)="imprimir_valor(valorInput.content)"></button>

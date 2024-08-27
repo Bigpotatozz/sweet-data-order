@@ -15,10 +15,9 @@ export class CrearPedidoComponent{
     this.identificador = value;
   }
 
+  imprimir_valor(value: any) {
+    alert(this.identificador);
+  }
 
-
-  
-
- 
 
 }

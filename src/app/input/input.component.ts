@@ -13,10 +13,10 @@ export class InputComponent implements OnInit{
   @Input() texto = '';
   @Input() identificador = '';
 
-  @Output() inpu: EventEmitter<string> = new EventEmitter<string>();
+  @Output() content: EventEmitter<string> = new EventEmitter<string>();
 
   ngOnInit(): void {
-    this.inputId.emit(this.identificador);
+    this.content.emit(this.identificador);
   }
 
 
