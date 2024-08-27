@@ -1,5 +1,5 @@
-<p>crear-pedido works!</p>
+<app-input texto="Estilo:" (content)="handleInput($event)" #valorInput1></app-input>
+<app-input texto="Chinela:" (content)="handleInput($event)" #valorInput2></app-input>
+<app-input texto="Color:" (content)="handleInput($event)" #valorInput3></app-input>
 
-<app-input texto="No se que poner:" identificador="nosequeponer" (content)="handleInputId($event)" #valorInput></app-input>
-
-<button id="boton" #boton (click)="imprimir_valor(valorInput.content)"></button>
+<button id="boton" #boton (click)="imprimirValor(valorInput1.value)"></button>

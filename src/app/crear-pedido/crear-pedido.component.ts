@@ -10,14 +10,26 @@ import { InputComponent } from "../input/input.component";
 })
 export class CrearPedidoComponent{
 
-  identificador = '';  
-  handleInputId(value: string) {
-    this.identificador = value;
+  //Incializa la variable que va a recibir la emision del hijo
+  valorInput1= '';
+  valorInput2= '';
+  valorInput3= '';
+  
+  
+  //funcion que maneja la emision del hijo
+  handleInput(valor: string ){ 
+    //asigna el valor que se emitio del hijo a la variable previamente creada
+    
+    this.valorInput1 = valor 
+
   }
 
-  imprimir_valor(value: any) {
-    alert(this.identificador);
+
+  imprimirValor(valor: string){ {
+
+    alert(valor);
+
   }
 
-
+}
 }

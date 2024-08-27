@@ -1,23 +1,27 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss'
 })
-export class InputComponent implements OnInit{
+export class InputComponent implements OnInit{ 
 
+  //Variable que se especifica en la etiqueta del componente
   @Input() texto = '';
-  @Input() identificador = '';
 
+  //variable que emititira el valor del input
   @Output() content: EventEmitter<string> = new EventEmitter<string>();
 
-  ngOnInit(): void {
-    this.content.emit(this.identificador);
-  }
+  //Variable que almacenara el valor del input
+  value = '';
 
+  ngOnInit(): void {
+    this.content.emit(this.value);
+  }
 
 }
